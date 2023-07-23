@@ -221,62 +221,51 @@ section .button button:hover{
   color:var(--primary-color);
 }
 /* Education CSS */
-h1
-{
-  text-align: center;
-  
+.education .topic{
+  color: rgb(247, 98, 148);
+}
+.education .boxes{
+  display:flex; 
+  flex-wrap: wrap;
+  justify-content:space-between;
+}
+.education .boxes .box{
+ margin:20px 0;
+ width:calc(100% / 3 - 20px);
+ text-align: center;
+ border-radius: 12px;
+ padding:30px 10px;
+ box-shadow: 0 5px 10px rgba(0,0,0,0.12);
+ cursor:default;
+ transition: all 0.4s ease;
+}
+.education .boxes .box:hover{
+ background: var(--primary-color);
+ color:var(--white-color);
+}
+.education .boxes .box .icon{
+ height:50px;
+ width:50px;
+ background: var(--primary-color);
+ border-radius: 50%;
+ text-align: center;
+ line-height: 50px;
+ font-size: 18px;
+ color:var(--white-color);
+ margin:0 auto 10px auto;
+ transition: all 0.4s ease;
+}
+.boxes .box:hover .icon{
+ background:var(--white-color);
+ color:var(--primary-color);
+}
+.education .boxes .box:hover .topic,
+.education .boxes .box:hover p{
+ color:var(--white-color);
+ transition: all 0.4s ease;
 }
 
-.education .edu-box
-{
-  width: 95%;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  
-}
 
-.education .edu-box .edu-card
-{
-  text-align: center;
-  width: 300px;
-  height: 260px;
-  box-shadow: 0 0 5px navy;
-  padding: 15px 10px;
-  background-color:#f0f8ff;
-}
-
-.education .edu-box .edu-card:hover
-{
-  transform: scale(1.1);
-  -webkit-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-}
-
-.education .edu-box .edu-card i
-{
-  color:black;
-  font-size: 45px;
-  margin-bottom: 15px;
-  cursor: pointer;
-}
-.edu-box .edu-card h2
-{
-    margin: 15px 0px;
-    font-size: 28px;
-    color:rgb(232, 76, 128);
-    font-family:Georgia, 'Times New Roman', Times, serif;
-  
-}
-.edu-box .edu-card p
-{
-    font-size: 16px;
-    line-height: 0.5;
-    padding: 0px 10px;
-    margin-bottom: 20px ;
-    font-family: sans-serif;
-}
 
 
 
@@ -420,18 +409,18 @@ footer{
     width:90%;
     margin:40px 0;
   }
-  .education .education-details .left{
-    display: flex;
-    justify-content:center;
-    width:100%;
+  .education .boxes .box{
+    margin:20px 0;
+    width:calc(100% / 1 - 20px);
   }
-  .education .education-details .right{
-    width:90%;
-    margin:40px 0;
-  }
+  
   .skills .boxes .box{
     margin:20px 0;
     width:calc(100% / 2 - 20px);
+  }
+  .project .boxes .box{
+    margin:20px 0;
+    width:calc(100% / 1 - 20px);
   }
 }
 @media (max-width:900px){
@@ -483,24 +472,12 @@ footer{
    .home .text-three{
     font-size: 35px;
   }
-  
-  /*
-  .skills .skills-details{
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-  }
-  .skills-details .text{
-    width:100%;
-    margin-bottom:50px;
-  }
-  .skills-details .boxes{
-    justify-content:center;
-    align-items: center;
-    width:100%;
-  }*/
 
   .skills .boxes .box{
+    margin:20px 0; 
+    width:100%;
+  }
+  .project .boxes .box{
     margin:20px 0; 
     width:100%;
   }
@@ -518,10 +495,7 @@ footer{
     font-size: 33px;
   }
 
-  /*.skills-details .boxes .per{
-    font-size: 50px;
-    color:var(--primary-color);
-  }*/
+  
 }
         
       
